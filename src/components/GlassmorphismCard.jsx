@@ -10,7 +10,8 @@ const GlassmorphismCard = ({
   frontIcon = null,
   hue1 = 300,
   hue2 = 240,
-  className = ""
+  className = "",
+  children = null
 }) => {
   return (
     <motion.div 
@@ -546,6 +547,7 @@ const GlassmorphismCard = ({
       </motion.div>
       
       {/* Header section */}
+      {!children && (
       <motion.header 
         className="flex items-start gap-4 mb-8 relative z-10"
         initial={{ opacity: 0, y: 10 }}
@@ -589,15 +591,17 @@ const GlassmorphismCard = ({
           )}
         </div>
       </motion.header>
+      )}
       
       {/* Features list */}
-      <motion.div 
-        className="flex-1 space-y-4 relative z-10"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        viewport={{ once: true }}
-      >
+      {!children && (
+        <motion.div 
+          className="flex-1 space-y-4 relative z-10"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
         {features.map((feature, index) => (
           <motion.div 
             key={index}
@@ -629,7 +633,15 @@ const GlassmorphismCard = ({
             </div>
           </motion.div>
         ))}
-      </motion.div>
+        </motion.div>
+      )}
+      
+      {/* Children content */}
+      {children && (
+        <div className="relative z-10">
+          {children}
+        </div>
+      )}
       
       {/* Bottom highlight */}
       <div 

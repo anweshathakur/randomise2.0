@@ -28,6 +28,7 @@ const Navbar = () => {
         { href: "/events", label: "Events" },
         { href: "/gallery", label: "Gallery" },
         { href: "/teams", label: "Team" },
+        { href: "/login", label: "Login" },
     ];
 
     return (
@@ -53,7 +54,7 @@ const Navbar = () => {
                             <Link href="/" className="flex items-center group">
                                 <div className="relative h-10 w-34 mr-3 transition-transform duration-300 group-hover:rotate-12">
                                     <Image
-                                        src="/nav_logo.avif"
+                                        src="/Logo.png"
                                         alt="Randomize"
                                         fill
                                         className="object-contain"
@@ -67,7 +68,7 @@ const Navbar = () => {
                                         backgroundImage: 'linear-gradient(to right, #4ECDC4, #45B7D1, #96CEB4)' 
                                     }}
                                 >
-                                    
+                                 Randomize   
                                 </motion.span>
                             </Link>
                         </motion.div>
