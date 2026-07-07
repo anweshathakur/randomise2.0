@@ -63,7 +63,7 @@ const Navbar = () => {
                                     />
                                 </div>
                                 <motion.span 
-                                    className="text-xl font-bold bg-gradient-to-r from-[#FF6B6B] via-[#4ECDC4] to-[#45B7D1] bg-clip-text text-transparent hidden sm:block"
+                                    className="text-xl font-bold bg-gradient-to-r from-[#45B7D1] via-[#4ECDC4] to-[#4ECDC4] bg-clip-text text-transparent hidden sm:block"
                                     whileHover={{ 
                                         backgroundImage: 'linear-gradient(to right, #4ECDC4, #45B7D1, #96CEB4)' 
                                     }}
